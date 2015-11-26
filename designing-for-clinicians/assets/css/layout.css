@@ -74,13 +74,14 @@
 		font-weight: normal; 
 		margin-top: 20px;}
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
-	h1 { font-size: 42px; line-height: 50px; margin-bottom: 10px;}
-	h2 { font-size: 32px; line-height: 40px; margin-bottom: 8px; }
+	h1, h2 { font-size: 32px; line-height: 40px; margin-bottom: 8px; }
 	h3 { font-size: 28px; line-height: 34px; margin-bottom: 22px; }
 	h5 { font-size: 20px; line-height: 30px; margin-bottom: 4px;}
 	h4 { font-size: 22px; line-height: 28px; margin-bottom: 22px; margin-top:30px;}
 	h6 { font-size: 18px; line-height: 21px; font-weight: bold; font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight:bold; }
+	.section_cite h6 { font-size: 14px; line-height: 21px; font-family: "Georgia", "Times New Roman", serif; }
 	h5.grey, p.grey {color: #696969;}
+	.title_page h1 { font-size: 42px; line-height: 50px; margin-bottom: 10px;}
 	.subheader { font-style: italic; color: #585858; }
 	.jarring {color: #cb1484;}
 	p.spacetop {
@@ -457,6 +458,9 @@
 /* #Site Styles
 ================================================== */
 	/*type*/
+	.header .title {
+		display:none;
+	}
 	span.grey {
 		color: #585858;
 	}
@@ -501,6 +505,13 @@
 		margin: 6px 16px 0px 16px;
 		background: url('../images/next.svg') no-repeat;	
 	}
+	nav.main a:focus, nav.main a:focus .next,
+	nav.footer a:focus {
+		border-bottom: 1px solid #0f74b2 ;
+	}
+	nav.main a:focus .prev{
+		border-top: 1px solid #0f74b2 ;
+	}
 	nav.main .prev {
 		float: left;
 		transform:rotate(180deg);
@@ -514,7 +525,7 @@
 		float: right;	
 	}
 	nav.main .prev-text, nav.main .next-text {
-		display:none;
+		visibility: hidden;
 	}
 	nav.main ul { 
 		margin: 0; 
@@ -622,7 +633,7 @@
 	
 	/*header*/
 	.header {
-		margin-top: 65px;
+		margin-top: 75px;
 		padding: 6px 0px 14px 0px;
 	}
 	.title, .title .version {
@@ -785,6 +796,18 @@
 	}
 	.quicktip .preview.hide { /*.elipsis.hide{*/
 		display: none;
+	}
+	.quicktip a:focus {
+		text-decoration: underline;
+		color: #434343;
+	}
+	.example a:focus {
+		text-decoration: underline;
+		color: #434343;
+	}
+	.example .cbp-fwslider li a:focus {
+		text-decoration: underline;
+		color: #434343;
 	}
 	.chapterStart {
 		text-align: center;
@@ -969,6 +992,13 @@
 		height: 576px;
 	}
 	/*allergy list*/
+	.allergy-list .header {
+		margin-top: 105px;
+	}
+	/*drug alerts*/
+	.drug-alerts .header {
+		margin-top: 105px;
+	}
 	/*human factors*/
 	#numeric-strings p {
 		margin: 0;
@@ -1009,12 +1039,24 @@
 	.ex-item p {
 		margin-top: 100px;
 	}
+	/*design principles*/
+	.design-principles .header {
+		margin-top: 105px;
+	}
+	/*authors*/
 	.authors-ch .author {
 		margin-bottom: 40px;
 	}
-
+	.authors-ch .header {
+		margin-top: 30px;
+	}
+	/*acknowledgements*/
+	.acknowledgements .header {
+		margin-top: 30px;
+	}
+	/*feedback*/
 	.feedback-pg .header, .impact-pg .header{
-		margin-top: 20px;
+		margin-top: -20px;
 	}
 	.feedback-pg h3 .note {
 		font-size: 14px;
